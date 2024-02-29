@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDhgXmVOMxoKMtzmnNT2bPgdyWI0WvkW0Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>510183756171</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.mobxReminder</string>
+	<key>PROJECT_ID</key>
+	<string>mobx-reminder-7ac60</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mobx-reminder-7ac60.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:510183756171:ios:5d2cbf76866b98fd779f8e</string>
+</dict>
+</plist>

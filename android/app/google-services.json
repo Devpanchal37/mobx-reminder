@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "510183756171",
+    "project_id": "mobx-reminder-7ac60",
+    "storage_bucket": "mobx-reminder-7ac60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510183756171:android:f6e68011c3711907779f8e",
+        "android_client_info": {
+          "package_name": "com.example.mobx_reminder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKyY_Q9tzgVHDJB2l0618e7vLVlFwikRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
