@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mobx_reminder/constant.dart';
+import 'package:mobx_reminder/main.dart';
 import 'package:mobx_reminder/state/app_state.dart';
-import 'package:provider/provider.dart';
 
 class LogInScreen extends StatelessWidget {
-  final emailCont = TextEditingController();
+  final emailCont = TextEditingController(text: "demo@provider.com");
 
-  final passCont = TextEditingController();
+  final passCont = TextEditingController(text: "12345678");
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +34,18 @@ class LogInScreen extends StatelessWidget {
                 onPressed: () {
                   final email = emailCont.text.trim();
                   final password = passCont.text.trim();
-                  context
-                      .read<AppState>()
-                      .login(email: email, password: password);
+                  // context
+                  //     .read<AppState>()
+                  //     .login(email: email, password: password);
+                  appState.login(email: email, password: password);
                 },
-                child: const Text("Log In")),
+                child: const Text(
+                  "Log In",
+                )),
             TextButton(
                 onPressed: () {
-                  context.read<AppState>().goTo(AppScreen.register);
+                  // context.read<AppState>().goTo(AppScreen.register);
+                  appState.goTo(AppScreen.register);
                 },
                 child: const Text("New Register"))
           ],

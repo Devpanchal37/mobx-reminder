@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart' show immutable;
 
 const Map<String, AuthError> authErrorMapping = {
-  'user-not-found': AuthErrorUserNotFound(),
+  'invalid-credential': AuthErrorUserNotFound(),
   'weak-password': AuthErrorWeakPassword(),
   'invalid-email': AuthErrorInvalidEmail(),
   'operation-not-allowed': AuthErrorOperationNotAllowed(),

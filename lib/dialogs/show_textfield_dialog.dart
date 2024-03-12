@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobx_reminder/constant.dart';
 
 enum TextFieldDialogButtonType { cancel, confirm }
 
@@ -23,8 +24,7 @@ Future<String?> showTextFieldDialog({
           autofocus: true,
           controller: controller,
           decoration: InputDecoration(
-            hintText: hintText,
-          ),
+              hintText: hintText, hintStyle: TextStyle(color: primaryColor)),
         ),
         actions: options.entries.map(
           (option) {

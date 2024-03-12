@@ -97,12 +97,46 @@ mixin _$AppState on _AppState, Store {
     });
   }
 
+  late final _$deleteReminderFromFirebaseAsyncAction =
+      AsyncAction('_AppState.deleteReminderFromFirebase', context: context);
+
+  @override
+  Future<bool> deleteReminderFromFirebase(String reminderid) {
+    return _$deleteReminderFromFirebaseAsyncAction
+        .run(() => super.deleteReminderFromFirebase(reminderid));
+  }
+
   late final _$deleteAsyncAction =
       AsyncAction('_AppState.delete', context: context);
 
   @override
-  Future<bool> delete(Reminder reminder) {
-    return _$deleteAsyncAction.run(() => super.delete(reminder));
+  Future<bool> delete(String reminderid) {
+    return _$deleteAsyncAction.run(() => super.delete(reminderid));
+  }
+
+  late final _$deleteAccountAsyncAction =
+      AsyncAction('_AppState.deleteAccount', context: context);
+
+  @override
+  Future<bool> deleteAccount() {
+    return _$deleteAccountAsyncAction.run(() => super.deleteAccount());
+  }
+
+  late final _$logOutAsyncAction =
+      AsyncAction('_AppState.logOut', context: context);
+
+  @override
+  Future<void> logOut() {
+    return _$logOutAsyncAction.run(() => super.logOut());
+  }
+
+  late final _$createFirebaseReminderAsyncAction =
+      AsyncAction('_AppState.createFirebaseReminder', context: context);
+
+  @override
+  Future<bool> createFirebaseReminder(String text, DateTime creationDate) {
+    return _$createFirebaseReminderAsyncAction
+        .run(() => super.createFirebaseReminder(text, creationDate));
   }
 
   late final _$createReminderAsyncAction =
@@ -150,6 +184,15 @@ mixin _$AppState on _AppState, Store {
         () => super._registerOrLogin(fn: fn, email: email, password: password));
   }
 
+  late final _$registerAsyncAction =
+      AsyncAction('_AppState.register', context: context);
+
+  @override
+  Future<bool> register({required String email, required String password}) {
+    return _$registerAsyncAction
+        .run(() => super.register(email: email, password: password));
+  }
+
   late final _$_AppStateActionController =
       ActionController(name: '_AppState', context: context);
 
@@ -159,17 +202,6 @@ mixin _$AppState on _AppState, Store {
         _$_AppStateActionController.startAction(name: '_AppState.goTo');
     try {
       return super.goTo(screen);
-    } finally {
-      _$_AppStateActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  Future<bool> register({required String email, required String password}) {
-    final _$actionInfo =
-        _$_AppStateActionController.startAction(name: '_AppState.register');
-    try {
-      return super.register(email: email, password: password);
     } finally {
       _$_AppStateActionController.endAction(_$actionInfo);
     }

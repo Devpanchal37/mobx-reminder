@@ -1,10 +1,11 @@
 import 'package:mobx/mobx.dart';
+import 'package:mobx_reminder/hive_service/hive_reminder_model.dart';
 part 'reminder.g.dart';
 
 class Reminder = _Reminder with _$Reminder;
 
 abstract class _Reminder with Store {
-  final String id;
+  String id;
   final DateTime creationDate;
 
   @observable
@@ -19,6 +20,13 @@ abstract class _Reminder with Store {
       required this.text,
       required this.isDone});
 
+  // factory Reminder.fromReminderHive(ReminderHive reminderHive) {
+  //   return Reminder(
+  //       id: reminderHive.id,
+  //       creationDate: reminderHive.creationDate,
+  //       text: reminderHive.text,
+  //       isDone: reminderHive.isDone);
+  // }
   @override
   bool operator ==(covariant _Reminder other) =>
       id == other.id &&
